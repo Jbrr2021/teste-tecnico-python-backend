@@ -1,28 +1,89 @@
-# Transparência sobre uso de IA
+# 🤖 Transparência sobre uso de Inteligência Artificial
 
-Este arquivo foi incluído para atender à regra de transparência do desafio técnico.
+Este arquivo foi incluído para atender à regra de transparência do desafio técnico, que permite o uso de ferramentas de Inteligência Artificial desde que os artefatos gerados sejam commitados junto ao repositório.
 
-## Ferramenta utilizada
+O objetivo deste documento é explicar de forma clara como a IA foi utilizada no desenvolvimento da API de Foco e Produtividade.
+
+---
+
+## 🧠 Ferramentas de IA utilizadas
+
+Durante o desenvolvimento, foram utilizadas as seguintes ferramentas:
 
 - ChatGPT
+- GitHub Copilot no VSCode
 
-## Objetivo do uso
+---
 
-A IA foi utilizada como apoio para acelerar a estruturação inicial do projeto, sugerir organização de pastas, gerar uma primeira versão do código, criar exemplos de README e propor ideias de diagnóstico de produtividade.
+## 🎯 Objetivo do uso da IA
 
-## Decisões humanas aplicadas
+As ferramentas de IA foram utilizadas como apoio para acelerar o fluxo de desenvolvimento, organizar melhor a estrutura do projeto e revisar a entrega antes do commit final.
 
-- Escolha de FastAPI pela simplicidade e geração automática de documentação.
-- Escolha de SQLite para manter persistência simples sem exigir infraestrutura externa.
-- Inclusão de validações para `nivel_foco`, `tempo_minutos`, `comentario`, `categoria` e `tags`.
-- Inclusão de uma lógica criativa de feedback com base em média de foco, tempo total, percentual de sessões em flow e palavras citadas nos comentários.
+A IA foi usada principalmente para:
 
-## Prompts usados como referência
+- entender melhor os requisitos do desafio;
+- planejar a estrutura inicial do backend;
+- sugerir organização de pastas e arquivos;
+- gerar uma primeira base da API com FastAPI;
+- apoiar a criação dos schemas de validação;
+- sugerir a lógica do diagnóstico de produtividade;
+- revisar o README.md;
+- criar e melhorar testes automatizados;
+- auxiliar nos comandos de Git;
+- apoiar a documentação da entrega;
+- revisar mensagens de commit e entrega no LinkedIn.
 
-1. "Crie uma API em Python para registrar nível de foco, tempo de sessão e comentário, com endpoint de diagnóstico de produtividade."
-2. "Organize o projeto com FastAPI, SQLite, README, validação de erros e testes simples."
-3. "Inclua um arquivo explicando de forma transparente como a IA foi utilizada no projeto."
+---
 
-## Observação
+## 🛠️ Como cada ferramenta foi utilizada
 
-O código deve ser revisado, executado localmente e ajustado conforme necessidade antes da entrega final.
+### ChatGPT
+
+O ChatGPT foi utilizado principalmente para:
+
+- interpretar as regras do desafio técnico;
+- sugerir a estrutura inicial do projeto;
+- criar uma primeira versão dos arquivos principais;
+- apoiar a escrita do README.md;
+- sugerir exemplos de testes manuais;
+- organizar a explicação sobre o uso de IA;
+- auxiliar na preparação da mensagem de entrega.
+
+### GitHub Copilot
+
+O GitHub Copilot foi utilizado dentro do VSCode para:
+
+- revisar arquivos do projeto;
+- sugerir ajustes em dependências;
+- melhorar a cobertura de testes;
+- verificar comandos de execução local;
+- auxiliar no processo de commit;
+- ajudar na configuração do remoto Git;
+- apoiar o envio do projeto para o GitHub.
+
+---
+
+## 👤 Decisões humanas aplicadas
+
+Apesar do uso de IA, as principais decisões do projeto foram revisadas e validadas manualmente.
+
+Decisões aplicadas durante o desenvolvimento:
+
+- escolha do FastAPI pela simplicidade e documentação automática em `/docs`;
+- escolha do SQLite para manter persistência simples sem infraestrutura externa;
+- manutenção de uma estrutura de projeto simples e organizada;
+- inclusão de validações para entradas inválidas;
+- inclusão dos campos extras `categoria`, `tags` e `data_registro`;
+- criação de uma lógica de diagnóstico com feedback automático;
+- inclusão de testes automatizados;
+- validação manual dos endpoints pela documentação interativa;
+- revisão final antes do commit e push para o GitHub.
+
+---
+
+## ✅ Validações realizadas manualmente
+
+A API foi executada localmente com o comando:
+
+```bash
+uvicorn app.main:app --reload
